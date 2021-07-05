@@ -169,7 +169,8 @@ def John_Burrows_Delta_Method():
                                                 feature_stdev)
 
     # Tokenize the test case
-    testcase_tokens = nltk.word_tokenize(ld.books_by_author["TestCase"])
+    testcase_book = re.sub(regex, subst, ld.books_by_author["TestCase"])
+    testcase_tokens = nltk.word_tokenize(testcase_book)
 
     # Filter out punctuation and lowercase the tokens
     testcase_tokens = [token.lower() for token in testcase_tokens
