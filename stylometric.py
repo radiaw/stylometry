@@ -84,11 +84,12 @@ def John_Burrows_Delta_Method():
 
     # Lowercase the tokens so that the same word, capitalized or not,
     # counts as one word
-    regex = r'[^\w\d\s]+'
-    subst = ""
+    regex1 = r'[\-\—]+'
+    regex2 = r'[^\w\d\s]+'
     for author in authors:
-        books = re.sub(regex, subst, ld.books_by_author[author])
-        tokens = nltk.word_tokenize(books)
+        books_1 = re.sub(regex1, " ", ld.books_by_author[author])
+        books_2 = re.sub(regex2, "", books_1)
+        tokens = nltk.word_tokenize(books_2)
 
         # Filter out punctuation
         books_by_author_tokens[author] = (
@@ -170,8 +171,9 @@ def John_Burrows_Delta_Method():
                                                 feature_stdev)
 
     # Tokenize the test case
-    testcase_book = re.sub(regex, subst, ld.books_by_author["TestCase"])
-    testcase_tokens = nltk.word_tokenize(testcase_book)
+    testcase_book_1 = re.sub(regex1, " ", ld.books_by_author["TestCase"])
+    testcase_book_2 = re.sub(regex2, "", testcase_book_1)
+    testcase_tokens = nltk.word_tokenize(testcase_book_2)
 
     # Filter out punctuation and lowercase the tokens
     testcase_tokens = [token.lower() for token in testcase_tokens
