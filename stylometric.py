@@ -77,7 +77,7 @@ def John_Burrows_Delta_Method():
     ld.dataset_load()
 
     # Who are we dealing with this time?
-    authors = ("Jordan", "Sanderson")
+    authors = ("Jordan", "Sanderson", "Dickens", "Abercrombie", "Miller" )
 
     # Transform the authors' corpora into lists of word tokens
     books_by_author_tokens = {}

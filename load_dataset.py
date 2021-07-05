@@ -9,10 +9,12 @@ import time
 import datetime
 
 papers = {
-    #'Jordan': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
     'Jordan': [1, 2, 3, 4, 5, 7, 8, 9, 10, 11],
     'Sanderson': [12, 13, 14],
-    'TestCase': [1],
+    'Dickens': [1],
+    'Miller': [1],
+    'Abercrombie': [1],
+    'TestCase': [6],
 }
 
 # Make a dictionary out of the authors' corpora
