@@ -14,7 +14,10 @@ import nltk
 nltk.download('punkt')
 
 """
-Test 3: John Burrows’ Delta Method (Advanced)
+https://programminghistorian.org/en/lessons/introduction-to-stylometry-with-python#
+        third-stylometric-test-john-burrows-delta-method-advanced
+
+John Burrows’ Delta Method (Advanced)
 
 Like Kilgariff’s chi-squared, Burrows’ Delta is a measure of the “distance” between
 a text whose authorship we want to ascertain and some other corpus. Unlike
