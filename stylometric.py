@@ -97,14 +97,12 @@ def John_Burrows_Delta_Method():
              [token.lower() for token in books_by_author_tokens[author]])
 
     # Combine every paper except our test case into a single corpus
-    feature_count = 300
     whole_corpus = []
     for author in authors:
         whole_corpus += books_by_author_tokens[author]
 
-        # Get a frequency distribution
-        whole_corpus_freq_dist = list(nltk.FreqDist(whole_corpus).most_common(feature_count))
-        #print (whole_corpus_freq_dist[ :10 ])
+    # Get a frequency distribution
+    whole_corpus_freq_dist = list(nltk.FreqDist(whole_corpus).most_common(n = 300))
 
     # Print the Feature Frequency Distribution in all books
     print("The Feature Frequency Distribution in all books:\n")
