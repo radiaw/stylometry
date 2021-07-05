@@ -7,6 +7,7 @@ import pandas as pd
 import numpy.random as rnd
 import matplotlib.pyplot as plt
 import math
+import re
 
 # Load nltk
 import nltk
@@ -80,8 +81,11 @@ def John_Burrows_Delta_Method():
 
     # Lowercase the tokens so that the same word, capitalized or not,
     # counts as one word
+    regex = r'[^\w\d\s]+'
+    subst = ""
     for author in authors:
-        tokens = nltk.word_tokenize(ld.books_by_author[author])
+        books = re.sub(regex, subst, ld.books_by_author[author])
+        tokens = nltk.word_tokenize(books)
 
         # Filter out punctuation
         books_by_author_tokens[author] = (
@@ -103,13 +107,11 @@ def John_Burrows_Delta_Method():
         #print (whole_corpus_freq_dist[ :10 ])
 
     # Print the Feature Frequency Distribution in all books
-    i = 0
     print("The Feature Frequency Distribution in all books:\n")
     print("  Index     Feature     Frequency")
     print("---------+----------+---------------")
-    for word, count in whole_corpus_freq_dist:
-        i += 1
-        print("%5d  %10s%s" % (i, word.upper(), '{:15,}'.format(count)))
+    for index, (word, count) in enumerate(whole_corpus_freq_dist):
+        print("%5d  %10s%s" % (index, word.upper(), '{:15,}'.format(count)))
     print("\n");
 
     # The main data structure
@@ -182,14 +184,13 @@ def John_Burrows_Delta_Method():
 
     # Calculate the test case's feature z-scores
     testcase_zscores = {}
-    i = 0
-    for feature in features:
-        i += 1
+    for index, feature in enumerate(features):
         feature_val = testcase_freqs[feature]
         feature_mean = corpus_features[feature]["Mean"]
         feature_stdev = corpus_features[feature]["StdDev"]
         testcase_zscores[feature] = (feature_val - feature_mean) / feature_stdev
-        print("%5d  Test case z-score for feature %10s is %20.16f" % (i, feature.upper(), testcase_zscores[feature]))
+        print("%5d  Test case z-score for feature %10s is %20.16f" %
+              (index, feature.upper(), testcase_zscores[feature]))
     print("\n");
 
     for author in authors:
