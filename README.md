@@ -77,4 +77,5 @@ Complete works of Charles Dickens (Charles Dickens (61 pieces + adaptations))
 
 1. [https://programminghistorian.org/en/lessons/introduction-to-stylometry-with-python](https://programminghistorian.org/en/lessons/introduction-to-stylometry-with-python)
 
-[Understanding_and_explaining_Delta_measures_for_authorship_attribution_2017.pdf](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9ff8592b-40c6-484b-8e55-3081516fa3ff/Understanding_and_explaining_Delta_measures_for_authorship_attribution_2017.pdf)
+
+2.[https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9ff8592b-40c6-484b-8e55-3081516fa3ff/Understanding_and_explaining_Delta_measures_for_authorship_attribution_2017.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20211013%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211013T223148Z&X-Amz-Expires=86400&X-Amz-Signature=27ac497817257046f8d9a6ee9d070f8e18172c95d8a74039d97a582df49f8e17&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Understanding_and_explaining_Delta_measures_for_authorship_attribution_2017.pdf%22)]
